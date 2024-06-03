@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import {Button} from "@mui/material";
+import SendIcon from '@mui/icons-material/Send';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Box
+            width={600}
+            my={4}
+            display="flex"
+            alignItems="center"
+            gap={4}
+            p={2}
+            sx={{ border: '1px solid grey' }}
         >
-          Learn React
-        </a>
-      </header>
+
+        <TextField
+            id="outlined-textarea"
+            label="Good things that I have done"
+            placeholder="Gratetude"
+            multiline
+            fullWidth
+        />
+            <Button>
+                <SendIcon/>
+            </Button>
+        </Box>
     </div>
   );
 }
