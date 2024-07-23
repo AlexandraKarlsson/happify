@@ -1,13 +1,15 @@
 import './App.css'
-import CardComponent from './CardComponents/cardComponent'
 import InputComponent from "./InputComponent/inputComponent"
+import {CardList} from "./CardComponents/cardList";
+import './App.css';
+import {Container} from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
+      <Container maxWidth="sm">
         <InputComponent/>
-        <CardComponent/>
-    </div>
+        <CardList/>
+      </Container>
   );
 }
 
